@@ -1,4 +1,4 @@
 Hacker Scraper
 ==============
 
-A simple python script that scrapes the top 30 article titles and homepage html from Hacker News 
+A simple python script that scrapes the hacker news home page, automatically opens the top article on hacker news in browser and opens subsequent articles on user input.
