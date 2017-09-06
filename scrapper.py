@@ -1,5 +1,6 @@
 import urllib
 from bs4 import BeautifulSoup
+import webbrowser
 
 hackernews_url = "https://news.ycombinator.com/"
 http_response = urllib.request.urlopen(hackernews_url)
@@ -31,8 +32,12 @@ for row in table_rows:
         
     row_data = row.find_all("td")
     row_data_element = row_data[2]
+    row_data_element_link = row_data_element.find("a")
     print(row_data_element.find(text = True))
+    print(row_data_element_link.get("href"))
     f2.write(row_data_element.find(text = True))
+    f2.write("\n")
+    f2.write(row_data_element_link.get("href"))
     f2.write("\n")
 
 f2.close()
