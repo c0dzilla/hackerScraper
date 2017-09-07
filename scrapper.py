@@ -58,6 +58,6 @@ while current_article <= 57:
     if (next == "n"):
         current_article = current_article + 2
         webbrowser.open(lines[current_article], new = 1)
-        print("opening " + colored(lines[current_article - 1], 'green'))
+        print("opening " + colored(lines[current_article - 1], 'green', attrs = ['bold']))
 
 f2.close()
