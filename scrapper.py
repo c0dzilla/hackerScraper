@@ -8,15 +8,11 @@ from termcolor import colored, cprint
 hackernews_url = "https://news.ycombinator.com/"
 http_response = urllib.request.urlopen(hackernews_url)
 
-f1 = open("hackernews_html", "w")
 bytes = http_response.read()
 content = bytes.decode('utf-8')
-f1.write(content)
-f1.close
 
-open('hackernews', 'w').close()
-f2 = open("hackernews", "w+")
-f2.truncate()
+#file_src will store article titles and corresponding url
+file_src = open('hackernews', 'w+')
 soup = BeautifulSoup(content, "lxml")
 table = soup.find('table', class_ = "itemlist")
 table_rows = table.find_all("tr")
@@ -35,17 +31,15 @@ for row in table_rows:
     row_data = row.find_all("td")
     row_data_element = row_data[2]
     row_data_element_link = row_data_element.find("a")
-    #print(row_data_element.find(text = True))
-    #print(row_data_element_link.get("href"))
-    f2.write(row_data_element.find(text = True))
-    f2.write("\n")
-    f2.write(row_data_element_link.get("href"))
-    f2.write("\n")
+    file_src.write(row_data_element.find(text = True))
+    file_src.write("\n")
+    file_src.write(row_data_element_link.get("href"))
+    file_src.write("\n")
 
-f2.close()
+file_src.close()
 
-f2 = open('hackernews', 'r')
-text = f2.read()
+file_src = open('hackernews', 'r')
+text = file_src.read()
 lines = text.split("\n")
 
 current_article = 1
@@ -60,4 +54,4 @@ while current_article <= 57:
         webbrowser.open(lines[current_article], new = 1)
         print("opening " + colored(lines[current_article - 1], 'green', attrs = ['bold']))
 
-f2.close()
+file_src.close()
