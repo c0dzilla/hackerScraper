@@ -1,6 +1,5 @@
 Hacker Scraper
 ==============
 
-A simple python script that scrapes the hacker news home page, automatically opens the top article on hacker news in browser and opens subsequent articles on user input.
-
-Press n after running the script to open subsequent articles.
+1. Run script.
+2. Press 'n' to open subsequent articles.
