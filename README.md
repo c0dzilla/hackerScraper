@@ -18,4 +18,4 @@ pip install termcolor==1.1.0
 
 ```
 
-[repository link]: www.github.com/c0dzilla/hackerScrapper
+[repository link]: https://www.github.com/c0dzilla/hackerScraper
