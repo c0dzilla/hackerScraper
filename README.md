@@ -1,18 +1,17 @@
-#Hacker Scraper
+# Hacker Scraper
 
 A python script that opens hacker news articles from its home page in your default browser.
 
-##Setup
+## Setup
 
 1. Clone the [repository][repository link].
 2. Install the dependencies given below.
 3. Run script `./scrapper.py`.
 4. Press 'n' to open subsequent articles.
 
-##Dependencies
+## Dependencies
 
-Run  
- ```pip install beautifulsoup==4.6.0
+```pip install beautifulsoup==4.6.0
 pip install termcolor==1.1.0```
 
 [repository link]: www.github.com/c0dzilla/hackerScrapper
