@@ -11,7 +11,11 @@ A python script that opens hacker news articles from its home page in your defau
 
 ## Dependencies
 
-```pip install beautifulsoup==4.6.0
-pip install termcolor==1.1.0```
+```
+
+pip install beautifulsoup==4.6.0
+pip install termcolor==1.1.0
+
+```
 
 [repository link]: www.github.com/c0dzilla/hackerScrapper
