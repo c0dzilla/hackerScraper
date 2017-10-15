@@ -44,7 +44,7 @@ lines = text.split("\n")
 
 current_article = 1
 webbrowser.open(lines[current_article], new = 1)
-print("Opening "+ colored(lines[current_article - 1], 'green', attrs = ['bold']))
+print("Opening "+ colored(lines[current_article - 1], 'red', attrs = ['bold']))
 
 while current_article <= 57:
     next = input()
@@ -52,6 +52,6 @@ while current_article <= 57:
     if (next == "n"):
         current_article = current_article + 2
         webbrowser.open(lines[current_article], new = 1)
-        print("opening " + colored(lines[current_article - 1], 'green', attrs = ['bold']))
+        print("opening " + colored(lines[current_article - 1], 'red', attrs = ['bold']))
 
 file_src.close()
