@@ -54,15 +54,18 @@ while current_article <= 57:
 
 current_article = 1
 
-while 1:
+while 1:    
     user_input = input()
+
+    if (user_input == "exit"):
+        break
 
     try:
         next_article = int(user_input)
 
         if (next_article >=1 and next_article <= serial_no):
             current_article = 2*next_article - 1
-            webbrowser.open(lines[current_article], new = 1)
+            webbrowser.open(lines[current_article], new = 2)
             print("opening", colored(lines[current_article], 'red', attrs = ['bold']))
 
     except ValueError:
