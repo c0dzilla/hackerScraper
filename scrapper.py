@@ -56,6 +56,15 @@ current_article = 1
 
 while current_article <= 57:
     next = input()
-    current_article = current_article + 2
-    webbrowser.open(lines[current_article], new = 1)
-    print("opening " + colored(lines[current_article - 1], 'red', attrs = ['bold']))
+
+    if (next == 'd' and current_article + 2 <= 57):
+        current_article = current_article + 2
+        print(lines[current_article - 1])
+
+    if (next == 'a' and current_article - 2 >= 1):
+        current_article = current_article - 2
+        print(lines[current_article - 1])
+
+    if next == '':
+        webbrowser.open(lines[current_article], new = 1)
+        print("opening " + colored(lines[current_article - 1], 'red', attrs = ['bold']))
