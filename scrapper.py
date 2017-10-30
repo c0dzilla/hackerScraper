@@ -45,26 +45,25 @@ lines = text.split("\n")
 os.remove('hackernews')
 
 current_article = 1
-print(lines[current_article - 1])
+serial_no = 1
+print(serial_no, ".", lines[current_article - 1])
 while current_article <= 57:
     current_article = current_article + 2
-    print(lines[current_article - 1])
+    serial_no = serial_no + 1
+    print(serial_no, ".", lines[current_article - 1])
 
 current_article = 1
-#webbrowser.open(lines[current_article], new = 1)
-#print("Opening "+ colored(lines[current_article - 1], 'red', attrs = ['bold']))
 
-while current_article <= 57:
-    next = input()
+while 1:
+    user_input = input()
 
-    if (next == 'd' and current_article + 2 <= 57):
-        current_article = current_article + 2
-        print(lines[current_article - 1])
+    try:
+        next_article = int(user_input)
 
-    if (next == 'a' and current_article - 2 >= 1):
-        current_article = current_article - 2
-        print(lines[current_article - 1])
+        if (next_article >=1 and next_article <= serial_no):
+            current_article = 2*next_article - 1
+            webbrowser.open(lines[current_article], new = 1)
+            print("opening", colored(lines[current_article], 'red', attrs = ['bold']))
 
-    if next == '':
-        webbrowser.open(lines[current_article], new = 1)
-        print("opening " + colored(lines[current_article - 1], 'red', attrs = ['bold']))
+    except ValueError:
+        continue
