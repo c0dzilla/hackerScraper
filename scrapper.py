@@ -50,10 +50,6 @@ print("Opening "+ colored(lines[current_article - 1], 'red', attrs = ['bold']))
 
 while current_article <= 57:
     next = input()
-
-    if (next == "n"):
-        current_article = current_article + 2
-        webbrowser.open(lines[current_article], new = 1)
-        print("opening " + colored(lines[current_article - 1], 'red', attrs = ['bold']))
-
-file_src.close()
+    current_article = current_article + 2
+    webbrowser.open(lines[current_article], new = 1)
+    print("opening " + colored(lines[current_article - 1], 'red', attrs = ['bold']))
