@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import urllib
 from bs4 import BeautifulSoup
 import webbrowser
@@ -41,6 +42,7 @@ file_src.close()
 file_src = open('hackernews', 'r')
 text = file_src.read()
 lines = text.split("\n")
+os.remove('hackernews')
 
 current_article = 1
 webbrowser.open(lines[current_article], new = 1)
