@@ -7,7 +7,6 @@ A python script that opens hacker news articles from its home page in your defau
 1. Clone the [repository][repository link].
 2. Install the dependencies given below.
 3. Run script `./scrapper.py`.
-4. Press 'n' to open subsequent articles.
 
 ## Dependencies
 
