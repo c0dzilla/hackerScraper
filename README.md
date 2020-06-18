@@ -1,6 +1,9 @@
 # Hacker Scraper
 
-A python script that opens hacker news articles from its home page in your default browser.
+A python script to list the top hacker news articles in your terminal, and open whichever you want to read in the browser.
+
+![ss](ss.png)
+
 
 ## Setup
 
